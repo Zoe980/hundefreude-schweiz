@@ -9,6 +9,9 @@ import { BREEDS } from "@/data/breeds";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import InsuranceCrossSell from "@/components/crosssell/InsuranceCrossSell";
+import TrainingCrossSell from "@/components/crosssell/TrainingCrossSell";
+import StarterGuide from "@/components/crosssell/StarterGuide";
 
 function scoreBreeds(answers: QuizAnswers) {
   const scores: { breed: typeof BREEDS[0]; score: number }[] = [];
@@ -130,6 +133,12 @@ export default function Quiz() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-10 space-y-8">
+              <StarterGuide />
+              <InsuranceCrossSell />
+              <TrainingCrossSell />
             </div>
 
             <div className="text-center mt-6">

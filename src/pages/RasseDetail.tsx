@@ -6,6 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { Heart, MapPin, ArrowLeft, CheckCircle, X } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import InsuranceCrossSell from "@/components/crosssell/InsuranceCrossSell";
+import TrainingCrossSell from "@/components/crosssell/TrainingCrossSell";
 
 export default function RasseDetail() {
   const { slug } = useParams();
@@ -136,6 +138,9 @@ export default function RasseDetail() {
                 </div>
               </div>
             )}
+
+            <InsuranceCrossSell />
+            <TrainingCrossSell maxItems={2} />
           </div>
         </div>
       </main>
