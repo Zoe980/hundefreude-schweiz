@@ -16,6 +16,9 @@ import { Badge } from "@/components/ui/badge";
 import { Heart, MapPin, CheckCircle } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import InsuranceCrossSell from "@/components/crosssell/InsuranceCrossSell";
+import TrainingCrossSell from "@/components/crosssell/TrainingCrossSell";
+import StarterGuide from "@/components/crosssell/StarterGuide";
 import { toast } from "@/hooks/use-toast";
 
 const formSchema = z.object({
@@ -90,6 +93,12 @@ export default function Anfrage() {
               </div>
             </div>
           )}
+          <div className="mt-10 space-y-8">
+            <InsuranceCrossSell />
+            <TrainingCrossSell />
+            <StarterGuide />
+          </div>
+
           <Link to="/" className="inline-block mt-8">
             <Button variant="outline" className="rounded-xl">Zurück zur Startseite</Button>
           </Link>
