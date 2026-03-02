@@ -1,11 +1,12 @@
 /**
- * CRM Lead Payload – prepared for future webhook integration.
+ * CRM / Newsletter Lead Payload – prepared for future webhook integration.
  */
 export interface CrmLeadPayload {
   email: string;
   opt_in: true;
-  quiz_answers: Record<string, string>;
   recommended_breed: string;
+  interest_tags: string[];
+  quiz_answers?: Record<string, string>;
   timestamp: string;
   page_url: string;
 }
